@@ -1,12 +1,194 @@
-body{
-    div{
-        width: 200px;
-        height: 200px;
-        background-color: rgb(238, 255, 0);
-        border: 20px solid black;
-        color: rebeccapurple;
+body,
+h2,
+dl,
+dd {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-size: cover;
+}
+
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 15vw;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .2);
+
+    .songImg {
+        width: 70vw;
+        height: 70vw;
+        border-radius: 50%;
+        background-color: #000;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
     }
-    img{
-        width: 300px;
+
+    .songInfo {
+        height: 20vh;
+        margin-top: 6vw;
+        text-align: center;
+        color: aliceblue;
+
+        h2 {
+            font-weight: normal;
+            font-size: 24px;
+            margin-bottom: 3vw;
+        }
+
+        div {
+            font-size: 14px;
+        }
     }
+
+    .progress {
+        // border: 1px solid black;
+        color: white;
+        display: flex;
+        height: 8vw;
+        font-size: 14px;
+        line-height: 8vw;
+
+        .curTime,
+        .totalTime {
+            padding: 0 4vw
+        }
+
+        .drag {
+            height: 8vw;
+            flex: 1 1 auto;
+            position: relative;
+
+            .circle {
+                width: 2vw;
+                height: 2vw;
+                border: 2vw solid rgba(0, 255, 255, 0);
+                background: #fff;
+                background-clip: padding-box;
+                border-radius: 50%;
+                position: absolute;
+                left: -3vw;
+                top: 50%;
+                margin-top: -3vw;
+                z-index: 3;
+            }
+
+            .frontBg,
+            .backBg {
+                // width: 0;
+                height: .6vw;
+                background-color: #fff;
+                position: absolute;
+                top: calc(50% - 0.3vw);
+                left: 0;
+            }
+
+            .backBg {
+                width: 100%;
+                background-color: rgba(255, 255, 255, .2);
+            }
+        }
+    }
+
+    //底部菜单
+    .control {
+        height: 16vw;
+        width: 100vw;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+
+        // justify-content: space-between;
+        li {
+            width: 20%;
+
+            &:nth-of-type(1) {
+                background: url(../images/icon-like.png) no-repeat center/30%;
+
+                &.liking {
+                    background: url(../images/icon-like-solid.png) no-repeat center/30%;
+                }
+            }
+
+            &:nth-of-type(2) {
+                background: url(../images/icon-prev.png) no-repeat center/30%;
+            }
+
+            &:nth-of-type(3) {
+                background: url(../images/icon-play.png) no-repeat center/30%;
+            }
+
+            &:nth-of-type(4) {
+                background: url(../images/icon-next.png) no-repeat center/30%;
+
+                &.playing {
+                    background: url(../images/icon-pause.png) no-repeat center/30%;
+                }
+            }
+
+            &:nth-of-type(5) {
+                background: url(../images/icon-list.png) no-repeat center/30%;
+            }
+        }
+
+
+    }
+
+
+    // 列表
+    .list {
+        color: #fff;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        background: linear-gradient(rgb(5, 5, 5), rgba(170, 170, 170, .95));
+        z-index: 4;
+
+        dt,
+        dd,
+        .close {
+            height: 12vw;
+            line-height: 12vw;
+            font-size: 16px;
+            border-bottom: 1px solid white;
+            font-weight: 500;
+        }
+
+        dd {
+            padding-left: 3vw;
+            &.active {
+                color: #56b287;
+            }
+        }
+
+        dt,
+        .close {
+            text-align: center;
+        }
+        .close{
+            border-bottom: 0px;
+        }
+    }
+
+
+
+
+
 }
