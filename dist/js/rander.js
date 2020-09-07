@@ -1,0 +1,1 @@
+!function(o){console.log(o)}(window.play||(window.play={}));

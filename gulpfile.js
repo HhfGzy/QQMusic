@@ -35,7 +35,6 @@ function css() {
 
 function js() {
     return src(folder.src + "js/*.js")
-        .pipe(stripDebug())
         .pipe(uglify())
         .pipe(dest(folder.dist + 'js/'))
         .pipe(connect.reload());

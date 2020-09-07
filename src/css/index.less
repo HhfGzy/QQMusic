@@ -13,6 +13,7 @@ ul {
 
 body {
     background-size: cover;
+    transition: all 1s;
 }
 
 #wrap {
@@ -133,10 +134,13 @@ body {
 
             &:nth-of-type(3) {
                 background: url(../images/icon-play.png) no-repeat center/30%;
+                &.playing {
+                    background: url(../images/icon-pause.png) no-repeat center/30%;
+                }
             }
 
             &:nth-of-type(4) {
-                background: url(../images/icon-next.png) no-repeat center/30%;
+                background: url(../images/icon-next.png) no-repeat center/30%;   
 
                 &.playing {
                     background: url(../images/icon-pause.png) no-repeat center/30%;
@@ -160,6 +164,7 @@ body {
         bottom: 0;
         background: linear-gradient(rgb(5, 5, 5), rgba(170, 170, 170, .95));
         z-index: 4;
+        transform: translateY(300px);
 
         dt,
         dd,
