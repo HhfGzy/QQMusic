@@ -34,6 +34,23 @@
         "singer": "祖海",
         "duration": 214,
         "isLike": false
+    },{
+        "image": "../source/song_5.jpg",
+        "audioSrc": "../source/song_5.mp3",
+        "name": "昼夜",
+        "album": "昼夜",
+        "singer": "纯音乐",
+        "duration": 214,
+        "isLike": false
+    },
+	{
+        "image": "../source/song_6.jpg",
+        "audioSrc": "../source/song_6.mp3",
+        "name": "天空之城",
+        "album": "天空之城",
+        "singer": "纯音乐",
+        "duration": 214,
+        "isLike": false
     }
 
 ]
